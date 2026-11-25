@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | ConexAção</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" type="image/jpeg" href="Titulo.png">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <img src="Titulo.png" alt="ConexAção">
+
+        <div>
+            <h2>ConexAção</h2>
+            <span>Painel administrativo</span>
+        </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="#inicio" class="menu-item ativo" data-section="inicio">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Visão geral</span>
+        </a>
+
+        <a href="#mapa" class="menu-item" data-section="mapa">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Mapa</span>
+        </a>
+
+        <a href="#doacoes" class="menu-item" data-section="doacoes">
+            <i class="fa-solid fa-box-open"></i>
+            <span>Doações</span>
+        </a>
+
+        <a href="#coletas" class="menu-item" data-section="coletas">
+            <i class="fa-solid fa-truck"></i>
+            <span>Coletas</span>
+        </a>
+
+        <a href="#familias" class="menu-item" data-section="familias">
+            <i class="fa-solid fa-people-roof"></i>
+            <span>Famílias</span>
+        </a>
+
+        <a href="#parceiros" class="menu-item" data-section="parceiros">
+            <i class="fa-solid fa-handshake"></i>
+            <span>Parceiros</span>
+        </a>
+
+        <div class="menu-separador"></div>
+
+        <button type="button" class="menu-item botao-config" id="abrirConfiguracoes">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Configurações</span>
+        </button>
+
+    </nav>
+
+
+    <div class="sidebar-final">
+
+        <div class="admin-mini">
+
+            <img src="adm.jpg" alt="Administrador">
+
+            <div>
+                <strong>Administrador</strong>
+                <span>Conta administrativa</span>
+            </div>
+
+        </div>
+
+        <button class="btn-sair-menu" id="btnSairMenu" type="button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main class="conteudo">
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header class="topo">
+
+    <div class="topo-esquerda">
+
+        <button class="btn-mobile" id="btnMobile" type="button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div>
+
+            <span class="mini-titulo">CONEXAÇÃO • ADMIN</span>
+
+            <h1 id="tituloPagina">Visão geral</h1>
+
+            <p id="descricaoPagina">
+                Acompanhe tudo o que está acontecendo no ConexAção.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="topo-direita">
+
+        <button class="notificacao-btn" id="btnNotificacoes" type="button">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notificacao-ponto"></span>
+        </button>
+
+        <div class="perfil-topo">
+
+            <img src="adm.jpg" alt="Administrador">
+
+            <div>
+                <strong>Administrador</strong>
+                <span>Administrador</span>
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     VISÃO GERAL
+===================================================== -->
+
+<section id="inicio" class="dashboard-secao secao-inicio" data-section="inicio">
+
+    <div class="boas-vindas">
+
+        <div>
+
+            <span class="badge-verde">
+                <i class="fa-solid fa-circle"></i>
+                Sistema online
+            </span>
+
+            <h2>Visão geral do ConexAção</h2>
+
+            <p>
+                Acompanhe as principais informações da plataforma em um único lugar.
+            </p>
+
+        </div>
+
+        <div class="data-atual">
+            <i class="fa-regular fa-calendar"></i>
+            <span id="dataAtual">--</span>
+        </div>
+
+    </div>
+
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+        <div class="card estatistica-card">
+            <div class="card-topo">
+                <div class="icone-card verde"><i class="fa-solid fa-box-open"></i></div>
+                <span class="card-label">Total</span>
+            </div>
+            <h3 id="totalDoacoes">0</h3>
+            <p>Doações cadastradas</p>
+        </div>
+
+        <div class="card estatistica-card">
+            <div class="card-topo">
+                <div class="icone-card azul"><i class="fa-solid fa-truck"></i></div>
+                <span class="card-label">Operação</span>
+            </div>
+            <h3 id="totalColetas">0</h3>
+            <p>Coletas cadastradas</p>
+        </div>
+
+        <div class="card estatistica-card">
+            <div class="card-topo">
+                <div class="icone-card roxo"><i class="fa-solid fa-people-roof"></i></div>
+                <span class="card-label">Atendimento</span>
+            </div>
+            <h3 id="totalFamilias">0</h3>
+            <p>Famílias cadastradas</p>
+        </div>
+
+        <div class="card estatistica-card">
+            <div class="card-topo">
+                <div class="icone-card laranja"><i class="fa-solid fa-clock"></i></div>
+                <span class="card-label">Atenção</span>
+            </div>
+            <h3 id="totalPendentes">0</h3>
+            <p>Solicitações pendentes</p>
+        </div>
+
+    </div>
+
+
+    <!-- RESUMO -->
+
+    <div class="grid-resumo">
+
+        <div class="painel resumo-operacao">
+
+            <div class="painel-cabecalho">
+                <div>
+                    <span class="secao-label">ATIVIDADE</span>
+                    <h3>Resumo da operação</h3>
+                </div>
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="resumo-linhas">
+
+                <div class="resumo-linha">
+                    <div class="resumo-icone verde"><i class="fa-solid fa-box"></i></div>
+                    <div>
+                        <strong>Doações</strong>
+                        <span>Registros realizados</span>
+                    </div>
+                    <b id="resumoDoacoes">0</b>
+                </div>
+
+                <div class="resumo-linha">
+                    <div class="resumo-icone azul"><i class="fa-solid fa-truck"></i></div>
+                    <div>
+                        <strong>Coletas</strong>
+                        <span>Operações cadastradas</span>
+                    </div>
+                    <b id="resumoColetas">0</b>
+                </div>
+
+                <div class="resumo-linha">
+                    <div class="resumo-icone roxo"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <strong>Famílias</strong>
+                        <span>Solicitações recebidas</span>
+                    </div>
+                    <b id="resumoFamilias">0</b>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="painel acesso-rapido">
+
+            <div class="painel-cabecalho">
+                <div>
+                    <span class="secao-label">ACESSO RÁPIDO</span>
+                    <h3>Ações administrativas</h3>
+                </div>
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <div class="acoes-grid">
+
+                <a href="#doacoes">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>Ver doações</span>
+                </a>
+
+                <a href="#familias">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Ver famílias</span>
+                </a>
+
+                <a href="#coletas">
+                    <i class="fa-solid fa-truck"></i>
+                    <span>Ver coletas</span>
+                </a>
+
+                <a href="#mapa">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Abrir mapa</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAPA
+===================================================== -->
+
+<section id="mapa" class="dashboard-secao" data-section="mapa">
+
+    <div class="secao-cabecalho">
+
+        <div>
+
+            <span class="secao-label">LOCALIZAÇÃO</span>
+
+            <h2>Mapa de atendimento</h2>
+
+            <p>
+                Visualize os locais das solicitações cadastradas no ConexAção.
+            </p>
+
+        </div>
+
+        <div class="contador-mapa">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="totalPontosMapa">0 locais</span>
+        </div>
+
+    </div>
+
+    <div class="mapa-container">
+        <div id="map"></div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOAÇÕES
+===================================================== -->
+
+<section id="doacoes" class="dashboard-secao" data-section="doacoes">
+
+    <div class="secao-cabecalho">
+
+        <div>
+
+            <span class="secao-label">DOAÇÕES</span>
+
+            <h2>Gerenciamento de doações</h2>
+
+            <p>
+                Consulte e acompanhe todas as doações registradas na plataforma.
+            </p>
+
+        </div>
+
+        <button class="btn-atualizar" id="btnAtualizarDoacoes" type="button">
+            <i class="fa-solid fa-rotate"></i>
+            Atualizar
+        </button>
+
+    </div>
+
+    <div class="painel tabela-painel">
+
+        <div class="tabela-topo">
+            <div>
+                <strong>Últimas doações</strong>
+                <span>Registros mais recentes</span>
+            </div>
+        </div>
+
+        <div class="tabela-scroll">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Quantidade</th>
+                        <th>Cidade</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="doacoesBody">
+                    <tr>
+                        <td colspan="6">Carregando...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COLETAS
+===================================================== -->
+
+<section id="coletas" class="dashboard-secao" data-section="coletas">
+
+    <div class="secao-cabecalho">
+
+        <div>
+
+            <span class="secao-label">LOGÍSTICA</span>
+
+            <h2>Coletas</h2>
+
+            <p>
+                Acompanhe as coletas cadastradas e seus respectivos status.
+            </p>
+
+        </div>
+
+        <button class="btn-atualizar" id="btnAtualizarColetas" type="button">
+            <i class="fa-solid fa-rotate"></i>
+            Atualizar
+        </button>
+
+    </div>
+
+    <div class="painel tabela-painel">
+
+        <div class="tabela-topo">
+            <div>
+                <strong>Controle de coletas</strong>
+                <span>Acompanhamento operacional</span>
+            </div>
+        </div>
+
+        <div class="tabela-scroll">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Doação</th>
+                        <th>Endereço</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="coletasBody">
+                    <tr>
+                        <td colspan="5">Carregando...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAMÍLIAS
+===================================================== -->
+
+<section id="familias" class="dashboard-secao" data-section="familias">
+
+    <div class="secao-cabecalho">
+
+        <div>
+
+            <span class="secao-label">ATENDIMENTO</span>
+
+            <h2>Famílias</h2>
+
+            <p>
+                Consulte as famílias que solicitaram auxílio através do ConexAção.
+            </p>
+
+        </div>
+
+        <button class="btn-atualizar" id="btnAtualizarFamilias" type="button">
+            <i class="fa-solid fa-rotate"></i>
+            Atualizar
+        </button>
+
+    </div>
+
+    <div class="painel tabela-painel">
+
+        <div class="tabela-topo">
+            <div>
+                <strong>Solicitações de auxílio</strong>
+                <span>Famílias cadastradas</span>
+            </div>
+        </div>
+
+        <div class="tabela-scroll">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Necessidade</th>
+                        <th>Pessoas</th>
+                        <th>Cidade</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="familiasBody">
+                    <tr>
+                        <td colspan="6">Carregando...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PARCEIROS
+===================================================== -->
+
+<section id="parceiros" class="dashboard-secao" data-section="parceiros">
+
+    <div class="secao-cabecalho">
+
+        <div>
+
+            <span class="secao-label">REDE</span>
+
+            <h2>Parceiros</h2>
+
+            <p>
+                Organizações e instituições que fazem parte da rede ConexAção.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="parceiros-grid" id="parceirosConteudo">
+
+        <div class="parceiro-placeholder">
+
+            <div class="icone-vazio">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <h3>Parceiros</h3>
+
+            <p>Os parceiros cadastrados aparecerão aqui.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RODAPÉ
+===================================================== -->
+
+<footer class="rodape">
+
+    <div>
+        <strong>ConexAção</strong>
+        <span>Painel Administrativo</span>
+    </div>
+
+    <span>Sistema de gestão de doações e atendimento</span>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     MODAL DE CONFIGURAÇÕES
+===================================================== -->
+
+<div class="modal-overlay" id="modalConfiguracoes">
+
+    <div class="modal-config">
+
+        <div class="modal-header">
+
+            <div>
+                <span>PAINEL</span>
+                <h2>Configurações</h2>
+            </div>
+
+            <button id="fecharConfiguracoes" class="fechar-modal" type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="config-layout">
+
+            <aside class="config-menu">
+
+                <button class="config-menu-item ativo" data-config="perfil" type="button">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Perfil</span>
+                </button>
+
+                <button class="config-menu-item" data-config="aparencia" type="button">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Aparência</span>
+                </button>
+
+                <button class="config-menu-item" data-config="notificacoes" type="button">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notificações</span>
+                </button>
+
+                <button class="config-menu-item" data-config="seguranca" type="button">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Segurança</span>
+                </button>
+
+                <button class="config-menu-item" data-config="preferencias" type="button">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Preferências</span>
+                </button>
+
+                <button class="config-menu-item" data-config="conta" type="button">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Conta</span>
+                </button>
+
+            </aside>
+
+
+            <div class="config-conteudo">
+
+
+                <!-- PERFIL -->
+
+                <div class="config-pagina ativa" data-config-page="perfil">
+
+                    <div class="config-titulo">
+                        <span>MEU PERFIL</span>
+                        <h3>Informações do administrador</h3>
+                        <p>
+                            Gerencie as informações utilizadas no painel administrativo.
+                        </p>
+                    </div>
+
+                    <div class="perfil-config-topo">
+
+                        <img src="adm.jpg" alt="Administrador">
+
+                        <div>
+
+                            <button class="btn-secundario" type="button">
+                                <i class="fa-solid fa-camera"></i>
+                                Alterar foto
+                            </button>
+
+                            <p>JPG ou PNG. Recomendado até 2 MB.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="campo-config">
+                            <label>Nome</label>
+                            <input type="text" value="Administrador" id="perfilNome">
+                        </div>
+
+                        <div class="campo-config">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="Seu e-mail" id="perfilEmail">
+                        </div>
+
+                        <div class="campo-config">
+                            <label>Telefone</label>
+                            <input type="tel" placeholder="(00) 00000-0000" id="perfilTelefone">
+                        </div>
+
+                        <div class="campo-config">
+                            <label>Cargo</label>
+                            <input type="text" value="Administrador" disabled>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-principal" id="btnSalvarPerfil" type="button">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Salvar alterações
+                    </button>
+
+                </div>
+
+
+                <!-- APARÊNCIA -->
+
+                <div class="config-pagina" data-config-page="aparencia">
+
+                    <div class="config-titulo">
+                        <span>APARÊNCIA</span>
+                        <h3>Personalize o painel</h3>
+                        <p>
+                            Escolha como o painel administrativo deve aparecer para você.
+                        </p>
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-moon"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Tema escuro</strong>
+                            <span>Usar o modo escuro no painel.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="temaEscuro" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-compress"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Menu compacto</strong>
+                            <span>Reduzir o tamanho do menu lateral.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="menuCompacto">
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <div class="config-pagina" data-config-page="notificacoes">
+
+                    <div class="config-titulo">
+                        <span>NOTIFICAÇÕES</span>
+                        <h3>Central de notificações</h3>
+                        <p>Escolha quais avisos deseja receber.</p>
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-bell"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Notificações do sistema</strong>
+                            <span>Avisos sobre novas solicitações e doações.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="notificacoes" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-box"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Novas doações</strong>
+                            <span>Avisar quando uma nova doação for cadastrada.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="notificacaoDoacoes" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-users"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Novas solicitações</strong>
+                            <span>Avisar quando uma família solicitar auxílio.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="notificacaoFamilias" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEGURANÇA -->
+
+                <div class="config-pagina" data-config-page="seguranca">
+
+                    <div class="config-titulo">
+                        <span>SEGURANÇA</span>
+                        <h3>Segurança da conta</h3>
+                        <p>
+                            Controle as opções de segurança do seu acesso administrativo.
+                        </p>
+                    </div>
+
+                    <div class="seguranca-card">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-lock"></i></div>
+
+                        <div>
+                            <strong>Senha</strong>
+                            <span>Altere sua senha de acesso ao sistema.</span>
+                        </div>
+
+                        <button class="btn-secundario" type="button">
+                            Alterar senha
+                        </button>
+
+                    </div>
+
+                    <div class="seguranca-card">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-shield-halved"></i></div>
+
+                        <div>
+                            <strong>Sessão administrativa</strong>
+                            <span>Sua conta possui acesso administrativo ao sistema.</span>
+                        </div>
+
+                        <span class="status ativo">Ativa</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREFERÊNCIAS -->
+
+                <div class="config-pagina" data-config-page="preferencias">
+
+                    <div class="config-titulo">
+                        <span>PREFERÊNCIAS</span>
+                        <h3>Preferências do sistema</h3>
+                        <p>
+                            Ajuste o comportamento do painel conforme sua preferência.
+                        </p>
+                    </div>
+
+                    <div class="campo-config">
+
+                        <label>Atualização dos dados</label>
+
+                        <select id="atualizacaoDados">
+                            <option value="manual">Manual</option>
+                            <option value="30">A cada 30 segundos</option>
+                            <option value="60">A cada 1 minuto</option>
+                        </select>
+
+                    </div>
+
+                    <div class="opcao-config">
+
+                        <div class="opcao-icon"><i class="fa-solid fa-table"></i></div>
+
+                        <div class="opcao-texto">
+                            <strong>Mostrar informações extras</strong>
+                            <span>Exibir informações adicionais nas tabelas.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="informacoesExtras" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTA -->
+
+                <div class="config-pagina" data-config-page="conta">
+
+                    <div class="config-titulo">
+                        <span>CONTA</span>
+                        <h3>Gerenciamento da conta</h3>
+                        <p>
+                            Ações relacionadas à sua sessão administrativa.
+                        </p>
+                    </div>
+
+                    <div class="conta-perigo">
+
+                        <div>
+                            <strong>Sair da conta</strong>
+                            <span>Encerrar a sessão atual neste dispositivo.</span>
+                        </div>
+
+                        <button class="btn-perigo" id="btnSair" type="button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair da conta
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="dashboard.js"></script>
+
+
+<!-- GOOGLE MAPS -->
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwG3zQrsnbD1SZkn7N0hYNrdNCXFnkDkQ&callback=iniciarMapa"
+    async
+    defer
+></script>
+
+
+</body>
+
+</html>

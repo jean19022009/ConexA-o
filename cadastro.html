@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - ConexAção</title>
+
+    <link rel="stylesheet" href="Cadastro.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <!-- =========================================
+             LADO ESQUERDO
+        ========================================== -->
+
+        <section class="lado-esquerdo">
+
+            <div class="conteudo-esquerdo">
+
+                <div class="logo">
+
+                    <img src="Titulo.png" alt="Logo ConexAção">
+
+                </div>
+
+                <h1>Fça Parte do<br>ConexAção!</h1>
+
+                <p>
+                    Crie sua conta e faça parte dessa conexão
+                    entre quem quer ajudar e quem precisa de ajuda.
+                </p>
+
+
+                <!-- LOGIN SOCIAL -->
+
+                <div class="social-area">
+
+                    <h2>Cadastre-se usando</h2>
+
+
+                    <!-- GOOGLE -->
+
+                    <button
+                        type="button"
+                        class="social google"
+                        id="googleLogin">
+
+                        <i class="fa-brands fa-google"></i>
+
+                        <span>Continuar com o Google</span>
+
+                    </button>
+
+
+                    <!-- FACEBOOK -->
+
+                    <button
+                        type="button"
+                        class="social facebook"
+                        id="facebookLogin">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                        <span>Continuar com o Facebook</span>
+
+                    </button>
+
+
+                    <!-- TWITTER / X -->
+
+                    <button
+                        type="button"
+                        class="social twitter"
+                        id="twitterLogin">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                        <span>Continuar com o X</span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="login-link">
+
+                    Já possui uma conta?
+
+                    <a href="login.html">
+                        Entrar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LADO DIREITO
+        ========================================== -->
+
+        <section class="lado-direito">
+
+            <div class="form-container">
+
+                <div class="form-topo">
+
+                    <span>ConexAção</span>
+
+                    <h2>Crie sua conta</h2>
+
+                    <p>
+                        Preencha seus dados para começar.
+                    </p>
+
+                </div>
+
+
+                <form id="cadastroForm">
+
+
+                    <!-- NOME -->
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <div class="input">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                placeholder="Digite seu nome">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Digite seu e-mail">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TELEFONE -->
+
+                    <div class="campo">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <div class="input">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="telefone"
+                                placeholder="Digite seu telefone">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Crie uma senha">
+
+                            <i
+                                class="fa-regular fa-eye olho"
+                                id="mostrarSenha">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR SENHA -->
+
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <div class="input">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                placeholder="Confirme sua senha">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMOS -->
+
+                    <label class="termos">
+
+    <input
+        type="checkbox"
+        id="termos">
+
+    <span>
+        Aceito os termos de uso do ConexAção
+    </span>
+
+</label>
+
+
+<!-- =========================================
+     MODAL DOS TERMOS DE USO
+========================================== -->
+
+<div class="modal-termos" id="modalTermos">
+
+    <div class="termos-box">
+
+        <div class="termos-cabecalho">
+
+            <div>
+                <span>CONEXAÇÃO</span>
+
+                <h2>Termos de Uso</h2>
+            </div>
+
+            <button
+                type="button"
+                class="fechar-termos"
+                id="fecharTermos">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="termos-texto" id="termosTexto">
+
+            <h3>1. Sobre o ConexAção</h3>
+
+            <p>
+                O ConexAção é uma plataforma criada para aproximar
+                pessoas que desejam realizar doações de pessoas ou
+                famílias que necessitam de auxílio, buscando facilitar
+                o processo de conexão entre quem ajuda e quem precisa.
+            </p>
+
+
+            <h3>2. Cadastro</h3>
+
+            <p>
+                Para utilizar determinadas funcionalidades da
+                plataforma, o usuário deverá fornecer informações
+                verdadeiras, completas e atualizadas.
+            </p>
+
+            <p>
+                O usuário é responsável pelas informações fornecidas
+                durante o cadastro e pela segurança de sua conta.
+            </p>
+
+
+            <h3>3. Uso da plataforma</h3>
+
+            <p>
+                A plataforma deverá ser utilizada de maneira
+                responsável, respeitosa e de acordo com a legislação
+                aplicável.
+            </p>
+
+            <p>
+                Não é permitido utilizar o ConexAção para fornecer
+                informações falsas, praticar fraudes ou prejudicar
+                outros usuários.
+            </p>
+
+
+            <h3>4. Informações fornecidas</h3>
+
+            <p>
+                As informações fornecidas pelo usuário poderão ser
+                utilizadas para possibilitar o funcionamento dos
+                serviços oferecidos pela plataforma.
+            </p>
+
+
+            <h3>5. Doações</h3>
+
+            <p>
+                O ConexAção atua como uma plataforma de conexão entre
+                pessoas e instituições, não sendo responsável pela
+                realização direta de todas as doações ou pela qualidade
+                dos itens oferecidos pelos usuários.
+            </p>
+
+
+            <h3>6. Responsabilidade do usuário</h3>
+
+            <p>
+                O usuário deve utilizar a plataforma de forma
+                responsável e não fornecer informações de terceiros
+                sem autorização quando essa autorização for necessária.
+            </p>
+
+
+            <h3>7. Alterações</h3>
+
+            <p>
+                Estes termos poderão ser atualizados futuramente para
+                acompanhar mudanças na plataforma, nos serviços
+                oferecidos ou na legislação aplicável.
+            </p>
+
+
+            <h3>8. Aceitação</h3>
+
+            <p>
+                Ao confirmar a aceitação destes termos, o usuário
+                declara que leu e compreendeu as condições apresentadas
+                nesta página e concorda com sua utilização para acesso
+                ao ConexAção.
+            </p>
+
+
+            <div class="fim-termos">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Você chegou ao final dos termos.
+
+            </div>
+
+        </div>
+
+
+        <div class="termos-footer">
+
+            <p>
+                Leia todo o conteúdo antes de confirmar.
+            </p>
+
+            <button
+                type="button"
+                id="confirmarTermos"
+                disabled>
+
+                <i class="fa-solid fa-check"></i>
+
+                Li e aceito os termos
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                    <!-- MENSAGEM -->
+
+                    <p id="mensagem"></p>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="botao-cadastro">
+
+                        Criar minha conta
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>

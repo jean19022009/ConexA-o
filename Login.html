@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="Login.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Área de Login | ConexAção</title>
+
+    <link rel="icon" type="image/jpeg" href="Titulo.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LADO ESQUERDO -->
+        <div class="left">
+
+            <div class="logo">
+                <img src="Titulo.png" alt="Logo ConexAção">
+            </div>
+
+            <h1>
+                Bem-vindo ao <br>
+                <span>ConexAção</span>
+            </h1>
+
+            <div class="linha"></div>
+
+            <p>
+                Conectando pessoas que desejam ajudar com quem realmente precisa.
+            </p>
+
+        </div>
+
+
+        <!-- LADO DIREITO -->
+        <div class="right">
+
+            <div class="card">
+
+                <h2>Entrar</h2>
+
+                <p>Faça login para continuar</p>
+
+
+                <!-- LOGIN -->
+                <form id="loginForm">
+
+                    <!-- E-MAIL -->
+                    <label>E-mail</label>
+
+                    <div class="input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <label>Senha</label>
+
+                    <div class="input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                        >
+
+                        <i
+                            class="fa-regular fa-eye olho"
+                            id="mostrarSenha"
+                        ></i>
+
+                    </div>
+
+
+                    <!-- OPÇÕES -->
+                    <div class="options">
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="lembrarSenha"
+                            >
+
+                            Lembrar senha
+
+                        </label>
+
+                        <a href="#"id="esqueciSenha">
+                            Esqueci minha senha
+                        </a>
+
+                    </div>
+
+
+                    <!-- MENSAGEM -->
+                    <p id="mensagem"></p>
+
+
+                    <!-- BOTÃO -->
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <!-- DIVISOR -->
+                <div class="divider">
+
+                    <span>
+                        ou continue com
+                    </span>
+
+                </div>
+
+
+                <!-- REDES SOCIAIS -->
+                <div class="social">
+
+                    <a
+                        href="#"
+                        id="googleLogin"
+                        title="Entrar com Google"
+                    >
+                        <i class="fab fa-google"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        id="facebookLogin"
+                        title="Entrar com Facebook"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        id="appleLogin"
+                        title="Entrar com Apple"
+                    >
+                        <i class="fab fa-apple"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- CADASTRO -->
+                <div class="register">
+
+                    Ainda não possui conta?
+
+                    <a href="cadastro.html">
+                        Cadastre-se
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- CONEXÃO SUPABASE -->
+    <script src="supabase.js"></script>
+
+    <!-- JAVASCRIPT DO LOGIN -->
+    <script src="Login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1002 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #021d22;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ================= MENU LATERAL ================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    background: rgba(1, 17, 23, 0.92);
+    border-right: 1px solid rgba(124, 255, 50, 0.15);
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.sidebar-logo img {
+    width: 165px;
+    max-width: 100%;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 10px;
+    color: #cfcfcf;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-link span {
+    font-size: 7px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #7cff32;
+    background: rgba(124, 255, 50, 0.06);
+    padding-left: 15px;
+}
+
+.nav-link.active {
+    color: #7cff32;
+    background: rgba(124, 255, 50, 0.08);
+}
+
+.nav-link.active span {
+    color: #7cff32;
+}
+
+.sidebar-button {
+    margin-top: auto;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #39b54a;
+    border-radius: 30px;
+    color: #7cff32;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar-button:hover {
+    background: #39b54a;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ================= CONTEÚDO ================= */
+
+.main-content {
+    margin-left: 230px;
+}
+
+
+/* ================= SEÇÕES ================= */
+
+.section {
+    min-height: 100vh;
+    padding: 100px clamp(30px, 7vw, 100px);
+    scroll-margin-top: 20px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
+}
+
+.small-title {
+    color: #39b54a;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(38px, 5vw, 70px);
+    line-height: 1.08;
+    color: #7cff32;
+}
+
+.hero h1 span {
+    color: #7cff32;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin-top: 30px;
+    color: #d5d5d5;
+    font-size: clamp(15px, 1.5vw, 19px);
+    line-height: 1.7;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary {
+    background: transparent;
+    border: 2px solid #39b54a;
+    color: #7cff32;
+}
+
+.secondary {
+    border: 2px solid rgba(124, 255, 50, 0.5);
+    color: #b8b8b8;
+}
+
+.primary:hover,
+.secondary:hover {
+    transform: translateY(-4px);
+    border-color: #7cff32;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: min(90%, 500px);
+    position: relative;
+    z-index: 2;
+    animation: flutuar 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(124, 255, 50, 0.2));
+}
+
+.image-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #39b54a;
+    opacity: 0.08;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+
+/* ================= IMPACTO ================= */
+
+.impact-section {
+    min-height: 40vh;
+    padding: 80px clamp(30px, 7vw, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(124, 255, 50, 0.1);
+    border-bottom: 1px solid rgba(124, 255, 50, 0.1);
+}
+
+.impact-text span,
+.section-title span {
+    color: #39b54a;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.impact-text h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(30px, 5vw, 60px);
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.impact-text strong {
+    color: #7cff32;
+}
+
+.impact-text p {
+    margin-top: 20px;
+    color: #aaa;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.impact-number {
+    font-size: 150px;
+    color: rgba(124, 255, 50, 0.06);
+    font-family: "Archivo Black", sans-serif;
+}
+
+
+/* ================= TÍTULOS ================= */
+
+.section-title {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.section-title.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.1;
+    margin-top: 20px;
+}
+
+.section-title strong {
+    color: #7cff32;
+}
+
+
+/* ================= SOBRE ================= */
+
+.sobre {
+    background: #031f25;
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.sobre-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(124, 255, 50, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    min-height: 260px;
+    transition: 0.3s;
+}
+
+.sobre-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(124, 255, 50, 0.4);
+}
+
+.sobre-card h3 {
+    color: #7cff32;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.sobre-card p {
+    color: #bcbcbc;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.sobre-card.destaque {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-number {
+    color: #39b54a;
+    margin-bottom: auto;
+    font-size: 14px;
+}
+
+
+/* ================= FUNCIONAMENTO ================= */
+
+.funcionamento {
+    background: #021d22;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 25px;
+    background: #fff;
+    color: #1c2032;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #39b54a;
+    font-weight: bold;
+}
+
+.step img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+.step h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.step p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* ================= DOAÇÕES ================= */
+
+.doacoes {
+    background: #031f25;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.donation-card {
+    background: #fff;
+    color: #1c2032;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.donation-card:hover {
+    transform: translateY(-8px);
+}
+
+.donation-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.donation-card div {
+    padding: 25px;
+}
+
+.donation-card h3 {
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* ================= DOAR ================= */
+
+.doar {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(57, 181, 74, 0.10),
+            transparent 35%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.doar-content {
+    max-width: 750px;
+}
+
+.doar-number {
+    color: #39b54a;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.doar-content h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.doar-content h2 strong {
+    color: #7cff32;
+    display: block;
+}
+
+.doar-content > p {
+    color: #aaa;
+    max-width: 600px;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+/* OPÇÕES */
+
+.doar-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.doar-option {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(124, 255, 50, 0.12);
+    transition: 0.3s;
+}
+
+.doar-option:hover {
+    transform: translateY(-6px);
+    border-color: rgba(124, 255, 50, 0.45);
+    background: rgba(124, 255, 50, 0.06);
+}
+
+.doar-option > span {
+    color: #39b54a;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 14px;
+}
+
+.doar-option h3 {
+    color: #7cff32;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.doar-option p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* BOTÃO */
+
+.doar-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 420px;
+    padding: 20px 25px;
+    border-radius: 50px;
+    background: #39b54a;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(57, 181, 74, 0.15);
+}
+.doar-action + .doar-action {
+    margin-top: 20px;
+}
+
+.doar-action span {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.doar-action:hover {
+    background: #7cff32;
+    color: #011117;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(124, 255, 50, 0.2);
+}
+
+.doar-action:hover span {
+    transform: translateX(8px);
+}
+
+
+/* VISUAL */
+
+.doar-visual {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.visual-circle {
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    border: 1px solid rgba(124, 255, 50, 0.15);
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 181, 74, 0.15),
+            rgba(57, 181, 74, 0.02) 60%,
+            transparent 70%
+        );
+    box-shadow: 0 0 100px rgba(57, 181, 74, 0.08);
+    animation: pulsar 4s ease-in-out infinite;
+}
+
+.visual-content {
+    position: absolute;
+    text-align: center;
+    max-width: 250px;
+}
+
+.visual-content span {
+    color: #39b54a;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.visual-content strong {
+    display: block;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 110px;
+    line-height: 1;
+    color: #7cff32;
+}
+
+.visual-content p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* ================= PARCEIROS ================= */
+
+.parceiros {
+    background: #031f25;
+}
+
+.section-title p {
+    color: #aaa;
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+.partner-box {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 50px;
+    border: 1px solid rgba(124, 255, 50, 0.15);
+    border-radius: 25px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 255, 50, 0.06),
+            transparent
+        );
+}
+
+.partner-number {
+    font-size: 100px;
+    font-family: "Archivo Black", sans-serif;
+    color: rgba(124, 255, 50, 0.2);
+}
+
+.partner-box h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #7cff32;
+}
+
+.partner-box p {
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+
+/* ================= CONTATO ================= */
+
+.contato {
+    background: #021d22;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.contact-grid h3 {
+    color: #7cff32;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.contact-grid p,
+.contact-grid a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    transition: 0.3s;
+}
+
+.contact-grid a:hover {
+    color: #7cff32;
+}
+
+
+/* ================= RODAPÉ ================= */
+
+.footer {
+    background: #011117;
+    padding: 60px clamp(30px, 7vw, 100px) 0;
+}
+
+.footer-logo img {
+    width: 65px;
+}
+
+.footer-logo h2 {
+    color: #7cff32;
+    margin: 15px 0;
+}
+
+.footer-logo p {
+    color: #aaa;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* ================= ANIMAÇÕES ================= */
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes pulsar {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= MENU MOBILE ================= */
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 2000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #39b54a;
+    background: #011117;
+    color: #7cff32;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .donation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+        transition: 0.3s;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .section {
+        padding: 90px 25px 70px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 11vw, 55px);
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: min(80vw, 350px);
+    }
+
+    .impact-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .impact-number {
+        display: none;
+    }
+
+    .sobre-content {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doar {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .doar-content {
+        max-width: 100%;
+    }
+
+    .doar-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .doar-options {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .doar-action {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .doar-visual {
+        min-height: 350px;
+    }
+
+    .visual-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-box {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .partner-number {
+        font-size: 70px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+/* ================= CELULARES PEQUENOS ================= */
+
+@media (max-width: 450px) {
+
+    .section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .primary,
+    .secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .doar-content h2 {
+        font-size: 35px;
+    }
+
+    .doar-option {
+        padding: 18px;
+    }
+
+    .doar-action {
+        font-size: 15px;
+        padding: 18px 20px;
+    }
+
+    .visual-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .visual-content strong {
+        font-size: 80px;
+    }
+
+    .donation-form {
+        padding: 20px;
+    }
+
+    .step img {
+        width: 140px;
+        height: 140px;
+    }
+
+}
+

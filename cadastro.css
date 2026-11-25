@@ -1,0 +1,870 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    background: #f4f7f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
+
+.cadastro-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================
+   LADO ESQUERDO
+========================================= */
+
+.lado-esquerdo {
+    width: 42%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #064d31,
+            #087b4c
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* círculos decorativos */
+
+.lado-esquerdo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    top: -140px;
+    left: -140px;
+}
+
+
+.lado-esquerdo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    bottom: -250px;
+    right: -200px;
+}
+
+
+/* =========================================
+   CONTEÚDO ESQUERDO
+========================================= */
+
+.conteudo-esquerdo {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 30px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    width: 85px;
+    height: 85px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+
+.logo img {
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.conteudo-esquerdo h1 {
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+    letter-spacing: -0.5px;
+}
+
+
+.conteudo-esquerdo > p {
+    color: rgba(255,255,255,0.82);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-width: 350px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.social-area h2 {
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: rgba(255,255,255,0.75);
+
+    margin-bottom: 12px;
+}
+
+
+.social {
+    width: 100%;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    margin-bottom: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-size: 13px;
+
+    text-align: left;
+}
+
+
+.social i {
+    width: 25px;
+
+    font-size: 16px;
+}
+
+
+.social:hover {
+    background: rgba(255,255,255,0.17);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-link {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,0.75);
+}
+
+
+.login-link a {
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+}
+
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   LADO DIREITO
+========================================= */
+
+.lado-direito {
+    width: 58%;
+
+    background: #f5f7f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-container {
+    width: 100%;
+    max-width: 530px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px 40px;
+
+    box-shadow: 0 20px 55px rgba(0,0,0,0.09);
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.form-topo {
+    margin-bottom: 17px;
+}
+
+
+.form-topo span {
+    color: #0b8b55;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+
+.form-topo h2 {
+    color: #222;
+
+    font-size: 28px;
+
+    margin-top: 4px;
+}
+
+
+.form-topo p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo {
+    margin-bottom: 10px;
+}
+
+
+.campo label {
+    display: block;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.input {
+    width: 100%;
+    height: 42px;
+
+    border: 1px solid #dfe5e1;
+
+    border-radius: 8px;
+
+    background: #fafcfb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    transition: 0.2s;
+}
+
+
+.input:focus-within {
+    border-color: #0b8b55;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(11,139,85,0.08);
+}
+
+
+.input > i:first-child {
+    color: #7fa18b;
+
+    font-size: 13px;
+
+    width: 18px;
+
+    text-align: center;
+}
+
+
+.input input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    margin-left: 9px;
+
+    font-size: 13px;
+
+    color: #333;
+}
+
+
+.input input::placeholder {
+    color: #a4aaa6;
+}
+
+
+.olho {
+    cursor: pointer;
+
+    color: #7fa18b !important;
+
+    transition: 0.2s;
+}
+
+
+.olho:hover {
+    color: #0b8b55 !important;
+}
+
+
+/* =========================================
+   TERMOS
+========================================= */
+
+.termos {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 11px 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+/* =========================================
+   MODAL TERMOS DE USO
+========================================= */
+
+.modal-termos {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+.modal-termos.ativo {
+    display: flex;
+}
+
+
+/* =========================================
+   CAIXA DOS TERMOS
+========================================= */
+
+.termos-box {
+    width: 100%;
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.termos-cabecalho {
+    padding: 20px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.termos-cabecalho span {
+    color: #0b8b55;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.termos-cabecalho h2 {
+    margin-top: 3px;
+
+    color: #222;
+
+    font-size: 23px;
+}
+
+.fechar-termos {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: #f1f4f2;
+
+    color: #555;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.fechar-termos:hover {
+    background: #e4e9e6;
+
+    transform: none;
+}
+
+
+/* =========================================
+   ÁREA DO TEXTO
+========================================= */
+
+.termos-texto {
+    padding: 25px;
+
+    overflow-y: auto;
+
+    flex: 1;
+
+    max-height: 55vh;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.termos-texto h3 {
+    color: #222;
+
+    font-size: 15px;
+
+    margin-bottom: 6px;
+
+    margin-top: 18px;
+}
+
+.termos-texto h3:first-child {
+    margin-top: 0;
+}
+
+.termos-texto p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   AVISO FINAL
+========================================= */
+
+.fim-termos {
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    background: #edf7f1;
+
+    color: #0b7a4b;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.fim-termos i {
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.termos-footer {
+    padding: 15px 25px;
+
+    border-top: 1px solid #e5e5e5;
+
+    background: #fafcfb;
+}
+
+.termos-footer p {
+    font-size: 11px;
+
+    color: #888;
+
+    margin-bottom: 8px;
+}
+
+#confirmarTermos {
+    width: 100%;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0b8b55;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#confirmarTermos:disabled {
+    background: #cbd3ce;
+
+    color: #8a918c;
+
+    cursor: not-allowed;
+
+    opacity: 1;
+}
+
+#confirmarTermos:not(:disabled):hover {
+    background: #05693f;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .modal-termos {
+        padding: 10px;
+    }
+
+    .termos-box {
+        max-height: 94vh;
+
+        border-radius: 14px;
+    }
+
+    .termos-texto {
+        max-height: 60vh;
+
+        padding: 20px;
+
+        font-size: 12px;
+    }
+
+    .termos-cabecalho {
+        padding: 17px 20px;
+    }
+
+    .termos-footer {
+        padding: 13px 20px;
+    }
+
+}
+
+.termos input {
+    width: 14px;
+    height: 14px;
+
+    accent-color: #0b8b55;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MENSAGEM
+========================================= */
+
+#mensagem {
+    min-height: 16px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+
+    line-height: 15px;
+}
+
+
+/* =========================================
+   BOTÃO CADASTRO
+========================================= */
+
+.botao-cadastro {
+    width: 100%;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0b7a4b;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s;
+}
+
+
+.botao-cadastro:hover {
+    background: #05693f;
+
+    transform: translateY(-1px);
+}
+
+
+.botao-cadastro:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================
+   TELAS PEQUENAS
+========================================= */
+
+@media (max-width: 850px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .cadastro-container {
+        height: auto;
+
+        min-height: 100vh;
+
+        flex-direction: column;
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%;
+    }
+
+    .lado-esquerdo {
+        padding: 35px 20px;
+    }
+
+    .conteudo-esquerdo {
+        max-width: 500px;
+    }
+
+    .lado-direito {
+        padding: 25px 15px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
+    .conteudo-esquerdo {
+        padding: 10px;
+    }
+
+    .conteudo-esquerdo h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .form-container {
+        padding: 25px 20px;
+    }
+
+    .form-topo h2 {
+        font-size: 25px;
+    }
+
+}

@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #05693f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    min-height: 750px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .20);
+}
+
+
+/* LADO ESQUERDO */
+
+.left {
+    width: 50%;
+    background: linear-gradient(180deg, #0b8b55, #05693f);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    position: relative;
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, .05);
+    border-radius: 50%;
+    left: -120px;
+    bottom: -120px;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, .04);
+    border-radius: 50%;
+    top: -120px;
+    right: -120px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.left h1 {
+    font-size: 58px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.left h1 span {
+    color: #49ff83;
+}
+
+.linha {
+    width: 80px;
+    height: 5px;
+    background: #49ff83;
+    margin: 25px 0;
+    border-radius: 30px;
+}
+
+.left p {
+    text-align: center;
+    font-size: 23px;
+    line-height: 38px;
+    max-width: 500px;
+}
+
+
+/* DIREITA */
+
+.right {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.card {
+    width: 100%;
+    max-width: 470px;
+}
+
+.card h2 {
+    font-size: 56px;
+    color: #222;
+    text-align: center;
+}
+
+.card > p {
+    color: #777;
+    text-align: center;
+    margin: 15px 0 40px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 1px solid #ddd;
+    height: 58px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    margin-bottom: 22px;
+}
+
+.input i {
+    color: #777;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.options a {
+    color: #0b8b55;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    background: #0b8b55;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #05693f;
+}
+
+button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+
+/* MENSAGEM */
+
+#mensagem {
+    min-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* DIVISOR */
+
+.divider {
+    margin: 45px 0;
+    position: relative;
+    text-align: center;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span {
+    color: #777;
+    background: #fff;
+    padding: 0 12px;
+}
+
+
+/* REDES SOCIAIS */
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social a {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 28px;
+    transition: .3s;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+    border-color: #0b8b55;
+    color: #0b8b55;
+}
+
+.social a:active {
+    transform: scale(.95);
+}
+
+
+/* CADASTRO */
+
+.register {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.register a {
+    color: #0b8b55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ÍCONE DE MOSTRAR SENHA */
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.input input {
+    flex: 1;
+    min-width: 0;
+}
+
+.olho {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #777;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.olho:hover {
+    color: #0b8b55;
+}
+
+
+/* RESPONSIVIDADE DO OLHO */
+
+@media(max-width:600px) {
+
+    .olho {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:1000px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        min-height: 350px;
+    }
+
+    .left h1 {
+        font-size: 40px;
+    }
+
+    .left p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .right {
+        padding: 40px 25px;
+    }
+
+    .card h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .left {
+        padding: 40px 25px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .left h1 {
+        font-size: 34px;
+    }
+
+    .left p {
+        font-size: 16px;
+    }
+
+    .card h2 {
+        font-size: 34px;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .social a {
+        width: 55px;
+        height: 55px;
+    }
+
+}

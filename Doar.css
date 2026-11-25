@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #021d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #021f27, #03141b);
+    border: 2px solid #1b6d49;
+    border-radius: 18px;
+    padding: 25px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 120, 0.15);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 130px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #6dff8d;
+    font-size: 18px;
+    transition: 2;
+}
+
+.login-btn {
+    background: #6dff8d;
+    color: #062b19;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.left {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left h1 {
+    color: white;
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.left h1 span {
+    color: #6dff8d;
+}
+
+.left p {
+    color: #d7d7d7;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.donation-form {
+    width: 100%;
+    border: 2px solid #1b6d49;
+    border-radius: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.donation-form label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.donation-form input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.donation-form select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.donation-form select option {
+    background: #0b1f26;
+    color: white;
+}
+
+.donation-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.donation-form textarea {
+    resize: none;
+    height: 90px;
+}
+
+.donation-form input::placeholder,
+.donation-form textarea::placeholder {
+    color: #8f8f8f;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: #6dff8d;
+    color: #072012;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.mascot {
+    width: 420px;
+    max-width: 100%;
+}
+
+.info-box {
+    width: 320px;
+    border: 2px solid #1b6d49;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.heart {
+    color: #ffe56c;
+    font-size: 32px;
+}
+
+.info-box p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    width: 100%;
+    background: #011117;
+    padding-top: 60px;
+    border-top: 1px solid rgba(120, 255, 120, 0.15);
+    border-radius: 20px;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo-rodape {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 80px 50px;
+}
+
+
+/* ÁREAS */
+
+.area-logo,
+.area-links,
+.area-contato,
+.area-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* LOGO */
+
+.area-logo h1 {
+    color: #8dff38;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.area-logo p {
+    color: #d7d7d7;
+    line-height: 30px;
+    max-width: 280px;
+}
+
+.area-logo img {
+    width: 70px;
+}
+
+
+/* TÍTULOS */
+
+.area-links h2,
+.area-contato h2,
+.area-redes h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* LINKS */
+
+.area-links a,
+.area-redes a {
+    color: #d7d7d7;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.area-links a:hover,
+.area-redes a:hover {
+    color: #8dff38;
+}
+
+
+/* CONTATO */
+
+.area-contato p {
+    color: #d7d7d7;
+    margin-bottom: 12px;
+}
+
+
+/* DIREITOS */
+
+.direitos {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    text-align: center;
+    color: #9f9f9f;
+    font-size: 14px;
+}
+
+@media(max-width: 1000px) {
+    .content {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        width: 100%;
+    }
+    .left h1 {
+        font-size: 42px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
